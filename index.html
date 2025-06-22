@@ -243,34 +243,20 @@
         }
         
         .demo-button-secondary {
-            background: transparent;
+            background: white;
             color: var(--card-color);
             border: 2px solid var(--card-color);
             margin-top: 0.8rem;
             position: relative;
             overflow: hidden;
-            z-index: 1;
-        }
-        
-        .demo-button-secondary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--card-gradient);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-        
-        .demo-button-secondary:hover::before {
-            left: 0;
+            transition: all 0.3s ease;
         }
         
         .demo-button-secondary:hover {
+            background: var(--card-color);
             color: white;
-            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
         .footer {
@@ -1040,6 +1026,7 @@
                     </div>
                     <a href="app/index.html?config=mood" class="demo-button" target="_blank">Vyzkoušet demo</a>
                     <a href="app/zobraz-kod.html?config=mood" class="demo-button demo-button-secondary" target="_blank">Zobrazit prezentaci</a>
+                    <a href="app/zobraz-graf.html?config=mood" class="demo-button demo-button-secondary" target="_blank">Zobrazit graf</a>
                 </div>
                 
                 <div class="demo-card understanding">
@@ -1050,6 +1037,7 @@
                     </div>
                     <a href="app/index.html?config=understanding" class="demo-button" target="_blank">Vyzkoušet demo</a>
                     <a href="app/zobraz-kod.html?config=understanding" class="demo-button demo-button-secondary" target="_blank">Zobrazit prezentaci</a>
+                    <a href="app/zobraz-graf.html?config=understanding" class="demo-button demo-button-secondary" target="_blank">Zobrazit graf</a>
                 </div>
                 
                 <div class="demo-card preference">
@@ -1060,6 +1048,7 @@
                     </div>
                     <a href="app/index.html?config=preference" class="demo-button" target="_blank">Vyzkoušet demo</a>
                     <a href="app/zobraz-kod.html?config=preference" class="demo-button demo-button-secondary" target="_blank">Zobrazit prezentaci</a>
+                    <a href="app/zobraz-graf.html?config=preference" class="demo-button demo-button-secondary" target="_blank">Zobrazit graf</a>
                 </div>
                 
                 <div class="demo-card agreement">
@@ -1070,6 +1059,7 @@
                     </div>
                     <a href="app/index.html?config=agreement" class="demo-button" target="_blank">Vyzkoušet demo</a>
                     <a href="app/zobraz-kod.html?config=agreement" class="demo-button demo-button-secondary" target="_blank">Zobrazit prezentaci</a>
+                    <a href="app/zobraz-graf.html?config=agreement" class="demo-button demo-button-secondary" target="_blank">Zobrazit graf</a>
                 </div>
             </div>
             
