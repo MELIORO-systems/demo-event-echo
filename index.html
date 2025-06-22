@@ -450,6 +450,90 @@
             font-weight: 300;
         }
         
+        /* NOVÁ SEKCE - Jak to vypadá */
+        .how-it-looks-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 4rem 0;
+            border-bottom: 1px solid rgba(138, 56, 236, 0.1);
+        }
+        
+        .how-it-looks-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .screenshots-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .screenshot-item {
+            text-align: center;
+        }
+        
+        .screenshot-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+            background: #f8f8f8;
+        }
+        
+        .screenshot-image-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .screenshot-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+        
+        .screenshot-item h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .screenshot-item p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .screenshot-item.voting .screenshot-image-wrapper {
+            border: 2px solid rgba(255, 0, 110, 0.1);
+        }
+        
+        .screenshot-item.voting .screenshot-image-wrapper:hover {
+            border-color: rgba(255, 0, 110, 0.3);
+        }
+        
+        .screenshot-item.results .screenshot-image-wrapper {
+            border: 2px solid rgba(131, 56, 236, 0.1);
+        }
+        
+        .screenshot-item.results .screenshot-image-wrapper:hover {
+            border-color: rgba(131, 56, 236, 0.3);
+        }
+        
         /* Open Source sekce */
         .open-source-section {
             background: linear-gradient(135deg, rgba(138,56,236,0.05), rgba(58,134,255,0.05));
@@ -733,6 +817,16 @@
                 display: none;
             }
             
+            /* NOVÁ SEKCE - mobilní verze */
+            .screenshots-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .screenshot-item p {
+                padding: 0 1rem;
+            }
+            
             .open-source-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -839,6 +933,30 @@
                         <div class="step-number">3</div>
                         <h3>Sledujte výsledky</h3>
                         <p>Real-time statistiky na obrazovce</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- NOVÁ SEKCE - Jak to vypadá -->
+            <section class="how-it-looks-section">
+                <h2>Jak to vypadá?</h2>
+                <p class="section-subtitle">Jednoduchý interface pro účastníky i organizátory</p>
+                
+                <div class="screenshots-container">
+                    <div class="screenshot-item voting">
+                        <div class="screenshot-image-wrapper">
+                            <img src="zobrazeni-hlasovani.png" alt="Hlasování účastníka">
+                        </div>
+                        <h3>Hlasování účastníka</h3>
+                        <p>Intuitivní rozhraní na mobilu - stačí naskenovat QR kód a vybrat odpověď</p>
+                    </div>
+                    
+                    <div class="screenshot-item results">
+                        <div class="screenshot-image-wrapper">
+                            <img src="zobrazeni-vysledku.png" alt="Zobrazení výsledků">
+                        </div>
+                        <h3>Živé výsledky</h3>
+                        <p>Real-time statistiky dostupné na jakémkoliv zařízení s automatickou aktualizací</p>
                     </div>
                 </div>
             </section>
