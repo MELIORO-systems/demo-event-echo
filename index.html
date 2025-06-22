@@ -754,27 +754,7 @@
         
         /* Disclaimer sekce */
         .disclaimer-section {
-            background: rgba(255, 193, 7, 0.1);
-            border: 2px dashed rgba(255, 193, 7, 0.5);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 3rem 0 2rem;
             text-align: center;
-        }
-        
-        .disclaimer-section h3 {
-            color: #f57c00;
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .disclaimer-section p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin: 0;
-            font-style: italic;
         }
         
         @media (max-width: 768px) {
@@ -876,7 +856,7 @@
             <section class="intro-section">
                 <h2>Získejte okamžitou zpětnou vazbu od vašeho publika</h2>
                 <div style="background: white; border: 1px solid #e0e0e0; border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
-                    <p class="intro-text" style="margin-bottom: 0;">
+                    <p style="margin: 0; font-size: 1.1rem; color: #555; line-height: 1.8;">
                         Event Echo je jednoduchý nástroj pro sběr živé zpětné vazby během jakékoliv akce. 
                         Účastníci hlasují přímo ze svých telefonů, vy sledujete výsledky v reálném čase na velkoplošné obrazovce (nebo jakékoliv zařízení připojeném k internetu), jedná se o web stránku. 
                         Žádné aplikace, žádné registrace – jen naskenovat QR kód a hlasovat.
@@ -1094,9 +1074,13 @@
             </div>
             
             <!-- Vtipné prohlášení -->
-            <section class="disclaimer-section">
-                <h3>⚠️ Důležité prohlášení</h3>
-                <p>Garantujeme 0% AI v aplikaci! (Aplikaci vytvořil Pavel z MELIORO Systems ve spolupráci s Claude 3.5, který to přebral po Gemini když se začal zadýchávat a padat do mdlob) 🤝</p>
+            <section class="disclaimer-section" style="margin: 3rem 0 2rem;">
+                <div style="background: rgba(255, 193, 7, 0.1); border-radius: 15px; padding: 1.5rem; max-width: 700px; margin: 0 auto;">
+                    <p style="margin: 0; color: #666; font-size: 1rem;">
+                        <strong style="color: #f57c00;">⚠️ Důležité prohlášení:</strong>
+                        Garantujeme 0% AI v aplikaci! (Aplikaci vytvořil Pavel z MELIORO Systems ve spolupráci s Claude 3.5, který to přebral po Gemini když se začal zadýchávat a padat do mdlob) 🤝
+                    </p>
+                </div>
             </section>
             
             <div class="footer">
