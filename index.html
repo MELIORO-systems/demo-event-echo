@@ -259,6 +259,146 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
+        /* Nová sekce pro administraci */
+        .admin-service-section {
+            margin: 4rem 0 3rem;
+        }
+        
+        .admin-service-card {
+            background: linear-gradient(135deg, rgba(138,56,236,0.03), rgba(255,0,110,0.03));
+            border: 2px solid rgba(138,56,236,0.1);
+            border-radius: 25px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .admin-service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(138,56,236,0.1);
+            border-color: rgba(138,56,236,0.2);
+        }
+        
+        .admin-service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
+        }
+        
+        .admin-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .admin-title {
+            font-size: 2.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .admin-description {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .admin-description p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .admin-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .admin-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+        
+        .admin-feature:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .feature-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #4caf50, #45a049);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .admin-feature span:last-child {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .admin-highlight {
+            background: linear-gradient(135deg, rgba(255,193,7,0.1), rgba(255,152,0,0.1));
+            border-left: 4px solid #ff9800;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-size: 1.05rem;
+        }
+        
+        .admin-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: linear-gradient(135deg, #8338ec, #ff006e);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(131,56,236,0.3);
+            margin-top: 2rem;
+        }
+        
+        .admin-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(131,56,236,0.4);
+        }
+        
+        .admin-button svg {
+            flex-shrink: 0;
+        }
+        
         .footer {
             text-align: center;
             color: #666;
@@ -822,6 +962,18 @@
             .demo-features {
                 grid-template-columns: 1fr;
             }
+            
+            .admin-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .admin-service-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .admin-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -1062,6 +1214,48 @@
                     <a href="app/zobraz-graf.html?config=agreement" class="demo-button demo-button-secondary" target="_blank">Zobrazit graf</a>
                 </div>
             </div>
+            
+            <!-- Sekce pro nasazení s administrací -->
+            <section class="admin-service-section">
+                <div class="admin-service-card">
+                    <div class="admin-icon">🚀</div>
+                    <h2 class="admin-title">Nechcete to řešit sami? Zařídíme to za vás!</h2>
+                    <div class="admin-description">
+                        <p>
+                            Víme, že ne každý je technický typ nebo má čas studovat návody. 
+                            <strong>Proto vám Event Echo rádi nainstalujeme na klíč!</strong>
+                        </p>
+                        <div class="admin-features">
+                            <div class="admin-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Ozvěte se nám, provedeme kompletní instalaci a zprovoznění</span>
+                            </div>
+                            <div class="admin-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Vytvoříme vám přístup do administrace s vlastním účtem</span>
+                            </div>
+                            <div class="admin-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Společně projdeme nastavení a krátké zaškolení (30 min online)</span>
+                            </div>
+                            <div class="admin-feature">
+                                <span class="feature-check">✓</span>
+                                <span>Hotovo! Měníte si vše kdy chcete a jak chcete</span>
+                            </div>
+                        </div>
+                        <p class="admin-highlight">
+                            <strong>Co získáte navíc:</strong> Administrační panel, kde můžete bez znalosti programování měnit všechny texty, otázky, odpovědi, barvy, loga a nastavení. Vše přímo v prohlížeči, okamžité změny, žádné čekání na programátora!
+                        </p>
+                    </div>
+                    <a href="mailto:pavel@melioro.cz?subject=Event Echo - mám zájem o nasazení řešení s administrací" class="admin-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Mám zájem o nasazení Event Echo s administrací
+                    </a>
+                </div>
+            </section>
             
             <!-- Vtipné prohlášení -->
             <section class="disclaimer-section" style="margin: 3rem 0 2rem;">
